@@ -33,7 +33,7 @@ def extract_paragraphs_with_improved_chunking(pdf_path, output_json_path, max_ch
             i += 1
         
         page_processed_text = '\n'.join(processed_lines)
-        processed_text += page_processed_text + "\n\n"  # اضافه کردن دو خط جدید بین صفحات
+        processed_text += page_processed_text + "\n"  # اضافه کردن دو خط جدید بین صفحات
     
     # تقسیم متن به پاراگراف‌ها
     paragraphs = []
@@ -100,6 +100,6 @@ def extract_paragraphs_with_improved_chunking(pdf_path, output_json_path, max_ch
 
 # مثال استفاده
 pdf_path = r"D:\translation\input\Contact_Center_Management_on_Fast_Forward_Succeeding_in_the_New (1).pdf"
-output_json_path = r"D:\translation\output\paragraphs_improved.json"
+output_json_path = r"D:\translation\output\paragraphs_improved_2.json"
 results = extract_paragraphs_with_improved_chunking(pdf_path, output_json_path, max_chars=3000)
 print(f"{len(results)} چانک استخراج شد با حداکثر 3000 کاراکتر و در فایل JSON ذخیره شد.")
